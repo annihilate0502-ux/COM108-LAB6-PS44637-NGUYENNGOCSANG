@@ -11,7 +11,7 @@
 ---
 
 ### Lần 1: Bài 1 - Bộ Lọc Làm Mịn Tín Hiệu (Moving Average)
-- Trạng thái: Chờ chấm
+- Trạng thái: Đã chấm
 - Prompt hỏi AI (nếu có): 
 - Lỗi phát hiện qua Test (nếu có): 
 - Cách sửa / Bài học: 
@@ -27,7 +27,7 @@
 ---
 
 ### Lần 4: Bài 2 - Nén Sai Phân Dữ Liệu IoT (Delta Encoding)
-- Trạng thái: 
+- Trạng thái: Đã chấm
 - Prompt hỏi AI (nếu có): 
 - Lỗi phát hiện qua Test (nếu có): 
 - Cách sửa / Bài học: 
@@ -43,7 +43,7 @@
 ---
 
 ### Lần 7: Bài 3 - Bộ Lọc Làm Mờ Điểm Ảnh (Box Blur Filter 3x3)
-- Trạng thái: 
+- Trạng thái: Chờ chấm
 - Prompt hỏi AI (nếu có): 
 - Lỗi phát hiện qua Test (nếu có): 
 - Cách sửa / Bài học: 
