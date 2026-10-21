@@ -48,15 +48,37 @@ int main() {
 
 // --- SINH VIÊN VIẾT CODE CỦA HÀM DƯỚI ĐÂY ---
 int doDiemNong(int a[][MAX_COLS], int row, int col, int hangPeak[], int cotPeak[], int nhietDoPeak[]) {
-    // TODO: Quét ma trận nhiệt độ a[][], tìm tất cả các "Điểm nóng" (Peak)
-    // Một ô (i, j) là Điểm nóng nếu giá trị của nó LỚN HƠN NGHIÊM NGẶT (>) tất cả
-    // các ô lân cận trực tiếp theo 4 hướng (trên, dưới, trái, phải) tồn tại trong ma trận.
-    // Lưu tọa độ vào hangPeak[], cotPeak[], giá trị vào nhietDoPeak[]
-    // Trả về tổng số lượng điểm nóng tìm thấy.
-    // LƯU Ý KỸ THUẬT:
-    // - Ma trận có thể có giá trị âm (kho lạnh).
-    // - Các ô ở góc/mép chỉ so sánh với các ô lân cận thực tế tồn tại.
-    // - Tuyệt đối không dùng lệnh in ra màn hình bên trong hàm này!
-    
-    return 0;
+    if (row <= 0 || col <= 0 || col > MAX_COLS) {
+        return 0;
+    }
+
+    int soLuong = 0;
+    const int hangLanCan[] = {-1, 1, 0, 0};
+    const int cotLanCan[] = {0, 0, -1, 1};
+
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            int laDiemNong = 1;
+
+            for (int huong = 0; huong < 4; huong++) {
+                int r = i + hangLanCan[huong];
+                int c = j + cotLanCan[huong];
+
+                if (r >= 0 && r < row && c >= 0 && c < col &&
+                    a[i][j] <= a[r][c]) {
+                    laDiemNong = 0;
+                    break;
+                }
+            }
+
+            if (laDiemNong) {
+                hangPeak[soLuong] = i;
+                cotPeak[soLuong] = j;
+                nhietDoPeak[soLuong] = a[i][j];
+                soLuong++;
+            }
+        }
+    }
+
+    return soLuong;
 }
